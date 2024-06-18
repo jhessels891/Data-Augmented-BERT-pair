@@ -12,4 +12,4 @@ The several data augmentation techniques can be performed in any order. For each
 3. Fine-tune the augmented data set just like the benchmark model. In `processor.py`, the code needs to be set to the right training data file and create .
 
 ## Step 3:
-Run `evaluation.py` for each train
+Run `evaluation.py` for each created train set, with the following command: `python evaluation.py --task_name semeval_NLI_M --pred_data_dir results/base/test_ep_4.txt` Where the `--pred_data_dir` is the directory leading to the appropriate ouput file.
