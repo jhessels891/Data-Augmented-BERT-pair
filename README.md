@@ -8,7 +8,7 @@ The benchmark model used is based on BERT-pair-NLI-M. See https://github.com/HSL
 ## Step 2:
 The several data augmentation techniques can be performed in any order. For each technique, the following steps need to be followed:
 1. Create a copy of the original training data set, to add the new sentences to.
-2. Perform the data augmentation techniques by running `augment_bert_pair`. For replication purposes, choose low_freq_min = 1, low_freq_max = 50 and k = 4, 8, or 12.
+2. Perform the data augmentation techniques by running `augment_bert_pair.py`. For replication purposes, choose low_freq_min = 1, low_freq_max = 50 and k = 4, 8, or 12.
 3. Fine-tune the augmented data set just like the benchmark model. In `processor.py`, the code needs to be set to the right training data file and create .
 
 ## Step 3:
