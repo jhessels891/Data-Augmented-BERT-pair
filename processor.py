@@ -66,7 +66,7 @@ class Semeval_NLI_M_Processor(DataProcessor):
 
     def get_train_examples(self, data_dir):
         """See base class."""
-        train_data = pd.read_csv(os.path.join(data_dir, "mixup/mu_train_NLI_16_12.csv"), header=None,
+        train_data = pd.read_csv(os.path.join(data_dir, "train_NLI_16.csv"), header=None,
                                  sep="\t").values
         return self._create_examples(train_data, "train")
 
