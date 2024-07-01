@@ -5,20 +5,22 @@ This page contains the code used for performing data augmentation technique to l
 ## Step 1:
 The benchmark model used is based on BERT-pair-NLI-M. See https://github.com/HSLCY/ABSA-BERT-pair for more information and the instructions for constructing the base model. For the purpose of this research, the SemEval 2016 data set for restaurant reviews is used. The benchmark is fine-tuned using the following command in the terminal:
 
-  `python run_classifier_TABSA.py
-    --task_name semeval_NLI_M \
-      --data_dir data/semevaldata/bert-pair
-      --vocab_file uncased_L-12_H-768_A-12/vocab.txt \
-      --bert_config_file uncased_L-12_H-768_A-12/bert_config.json \
-      --init_checkpoint uncased_L-12_H-768_A-12/pytorch_model.bin \
-      --eval_test \
-      --do_lower_case \
-      --max_seq_length 512 \
-      --train_batch_size 24 \
-      --learning_rate 2e-5 \
-      --num_train_epochs 4.0 \
-      --output_dir results/benchmark \
-      --seed 42`
+ ```
+python run_classifier_TABSA.py \
+--task_name semeval_NLI_M \
+--data_dir data/semevaldata/bert-pair \
+--vocab_file uncased_L-12_H-768_A-12/vocab.txt \
+--bert_config_file uncased_L-12_H-768_A-12/bert_config.json \
+--init_checkpoint uncased_L-12_H-768_A-12/pytorch_model.bin \
+--eval_test \
+--do_lower_case \
+--max_seq_length 512 \
+--train_batch_size 24 \
+--learning_rate 2e-5 \
+--num_train_epochs 4.0 \
+--output_dir results/mixup/mu_12 \
+--seed 42
+```
       
 ## Step 2:
 The several data augmentation techniques can be performed in any order. For each technique, the following steps need to be followed:
