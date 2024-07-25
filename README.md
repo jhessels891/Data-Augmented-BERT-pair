@@ -1,6 +1,6 @@
 # Data-Augmented-BERT-pair
 
-This page contains the code used for performing data augmentation technique to low-frequency categories, with the goal to enhance the performance of BERT-pair. The data augmentation techniques performed are keyboard augmentation, EDA and adjusted-EDA, back-translation and mixup. All code run in this research was done in PyCharm, using Python 3.8. The necessary packages can be downloaded using `pip install torch numpy nltk scikit-learn nlpaug sentencepiece openpyxl transformers sacremoses tensorflow`.
+This page contains the code used for performing data augmentation technique to low-frequency categories, with the goal to enhance the performance of BERT-pair. The data augmentation techniques performed are keyboard augmentation, EDA, back-translation, and mixup. All code run in this research was done in PyCharm, using Python 3.8. The necessary packages can be downloaded using `pip install torch numpy nltk scikit-learn nlpaug sentencepiece openpyxl transformers sacremoses tensorflow`.
 
 ## Step 1:
 The benchmark model used is based on BERT-pair-NLI-M. See https://github.com/HSLCY/ABSA-BERT-pair for more information and the instructions for constructing the base model. For the purpose of this research, the SemEval 2016 data set for restaurant reviews is used. The benchmark is fine-tuned using the following command in the terminal (with the original training data file correctly entered in `processor.py`):
